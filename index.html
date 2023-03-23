@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pages/index.css">
+    <script src="https://kit.fontawesome.com/8fedffd2fc.js" crossorigin="anonymous"></script>
+    <title>Project 4</title>
+  </head>
+  <body class="container">
+    <div class="container__semitransparent"></div>
+
+    <div class="page">
+      <header class="header">
+        <h2 class="header__title">Around<sup class="header__span"><sup>The U.S.</sup></sup></h2>
+        <div class="header__line"></div>
+      </header>
+
+      <main class="content">
+        <section class="profile">
+          <img src="./images/jacques.svg" alt="Foto de perfil" class="profile__image">
+          <div class="profile__info">
+            <div>
+              <h1 class="profile__title">Jacques Cousteau</h1>
+              <p class="profile__text">Explorar</p>
+            </div>
+
+            <button class="profile__edit-button" onclick="openPopup()"><i class="fa-solid fa-pen"></i></button>
+          </div>
+
+          <button class="profile__add-button"><i class="fa-solid fa-plus"></i></button>
+        </section>
+
+        <section class="elements">
+          <h2 class="elements__title">Elements</h2>
+
+          <div class="element">
+            <img src="./images/yosemite_valley.svg" alt="um rio envolto de árvores e montanhas ao fundo" class="element__image">
+            <div class="element__description">
+              <p class="element__title">Vale de Yosemite</p>
+              <button class="element__like"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="element">
+            <img src="./images/louise_lake.svg" alt="um lago de águas claras com montanhas gélidas ao fundo" class="element__image">
+            <div class="element__description">
+              <p class="element__title">Lago Louise</p>
+              <button class="element__like"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="element">
+            <img src="./images/mountain.svg" alt="montanhas com um por sol" class="element__image">
+            <div class="element__description">
+              <p class="element__title">Montanhas Carecas</p>
+              <button class="element__like"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="element">
+            <img src="./images/latemar.svg" alt="montanhas em um céu estrelado" class="element__image">
+            <div class="element__description">
+              <p class="element__title">Latemar</p>
+              <button class="element__like"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="element">
+            <img src="./images/vanoise.svg" alt="montanhas pequenas que cercam um lago" class="element__image">
+            <div class="element__description">
+              <p class="element__title">Vanoise National</p>
+              <button class="element__like"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="element">
+            <img src="./images/lago_di_braies.svg" alt="montanhas cobertas por neve e barcos de pequeno porte atracados em um porto em águas claras" class="element__image">
+            <div class="element__description">
+              <p class="element__title">Lado di braies</p>
+              <button class="element__like"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p class="copyright">&copy; 2021 Around the U.S.</p>
+      </footer>
+    </div>
+
+    <div class="popup">
+      <h2 class="popup__title">Editar perfil</h2>
+      <button class="popup__close-button">
+          <i class="fa-solid fa-x"></i>
+      </button>
+      <form class="popup__form">
+        <input type="text" name="name" placeholder="Nome" class="popup__input popup__input-name">
+        <input type="text" name="about" placeholder="Sobre mim" class="popup__input popup__input-about">
+        <button type="submit" class="popup__save-button">Salvar
+        <button>
+      </form>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
