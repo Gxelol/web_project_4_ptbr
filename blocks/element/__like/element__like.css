@@ -1,0 +1,16 @@
+.element__like {
+  cursor: pointer;
+  border: none;
+  background: #ffffff;
+  width: 21px;
+  height: 21px;
+  font-size: 22px;
+}
+
+.element__like:hover {
+  opacity: 0.6;
+}
+
+.element__like:active {
+  background: #000000;
+}
