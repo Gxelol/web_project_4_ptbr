@@ -2,6 +2,7 @@
 ### Overview
 * Introduction
 * Figma
+* Link to the site
 
 **Introduction**
 
@@ -12,3 +13,6 @@
 
 * [Link to the project at Figma](https://www.figma.com/file/XfB6BSINvliub43JgKza1e/WEB.-Sprint-4.-Around-The-U.S.-desktop-%2B-mobile-pt?node-id=0-1&t=eLFdrcNIQhaEIinR-0)
 
+**Link**
+
+Take a look at the project: [Link to the project at Github Pages](https://gxelol.github.io/web_project_4_ptbr_/)
