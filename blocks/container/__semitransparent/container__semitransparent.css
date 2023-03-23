@@ -1,0 +1,9 @@
+.container__semitransparent {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  background-color: #000000b7;
+  border-radius: 10px;
+  position: fixed;
+}
