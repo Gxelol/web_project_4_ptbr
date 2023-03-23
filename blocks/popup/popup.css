@@ -1,0 +1,19 @@
+.popup {
+  display: none;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 430px;
+  height: 330px;
+  z-index: 3;
+  background-color: #ffffff;
+  border-radius: 10px;
+  position: fixed;
+  top: 25%;
+}
+
+@media screen and (max-width: 680px) {
+  .popup {
+    width: 70%;
+    height: 322px;
+  }
+}
