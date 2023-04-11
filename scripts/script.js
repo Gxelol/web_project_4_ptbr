@@ -1,8 +1,13 @@
 const popup = document.querySelector('.popup');
+const popupLocation = document.querySelector('.popup__location');
+const image = document.querySelector('.image');
+const imagePicture = document.querySelector('.image__picture');
+const elementImage = document.querySelectorAll(".element__image");
 const transparentContainer = document.querySelector('.container__semitransparent');
 const editButton = document.querySelector('.profile__edit-button');
-const closeButton = document.querySelector('.popup__close-button');
-const saveButton = document.querySelector('.popup__save-button');
+const closePopupButton = document.querySelector('.popup__close-button');
+const closeImageButton = document.querySelector('.image__close-button');
+const submitButton = document.querySelector('.popup__submit-button');
 const likeButton = document.querySelector('.element__like');
 let profileName = document.querySelector('.profile__title');
 let profileAbout = document.querySelector('.profile__text');
@@ -22,7 +27,22 @@ function closePopup() {
   transparentContainer.style.display = "none";
 }
 
-saveButton.addEventListener("click", function saveContent(event) {
+function closeImage() {
+  image.style.display = "none";
+  transparentContainer.style.display = "none";
+}
+
+function openImage() {
+  // for (i = 0; i < elementImage.length; i++) {
+  //   const imageUrl = elementImage[i].getAttribute("src");
+  //   imagePicture.setAttribute("src", imageUrl);
+  // }
+
+  image.style.display = "flex";
+  transparentContainer.style.display = "flex";
+}
+
+submitButton.addEventListener("click", function submitContent(event) {
   event.preventDefault();
 
   profileName.textContent = inputName.value;
@@ -32,5 +52,14 @@ saveButton.addEventListener("click", function saveContent(event) {
 });
 
 editButton.addEventListener("click", openPopup);
-closeButton.addEventListener("click", closePopup);
 
+closePopupButton.addEventListener("click", closePopup);
+
+closeImageButton.addEventListener("click", closeImage);
+
+for (i = 0; i < elementImage.length; i++) {
+  elementImage[i].addEventListener("click", openImage);
+  const imageUrl = elementImage[i].getAttribute("src");
+}
+
+console.log(imagePicture);
