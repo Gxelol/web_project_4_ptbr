@@ -1,0 +1,8 @@
+.image {
+  display: none;
+  flex-direction: column;
+  margin: 0 auto;
+  z-index: 3;
+  position: fixed;
+  top: 25%;
+}
