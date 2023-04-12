@@ -19,7 +19,7 @@ const local = document.querySelector('.location');
 const createButton = document.querySelector('.location__create-button');
 const closeLocalButton = document.querySelector('.location__close-button');
 
-const imageContainer = document.querySelector('.image__container');
+const imageContainer = document.querySelector('.image');
 const closeImageButton = document.querySelector('.image__close-button');
 const imageItem = document.querySelector('.image__item');
 const imageDescription = document.querySelector('.image__description');
