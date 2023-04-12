@@ -1,4 +1,4 @@
-.popup__submit-button {
+.popup__save-button {
   width: 100%;
   padding: 14px;
   background: #000000;
@@ -8,6 +8,6 @@
   cursor: pointer;
 }
 
-.popup__submit-button:hover {
+.popup__save-button:hover {
   opacity: 0.8;
 }
