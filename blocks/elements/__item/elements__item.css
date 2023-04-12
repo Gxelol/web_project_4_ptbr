@@ -1,4 +1,4 @@
-.elements {
+.elements__item {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(282px, auto));
   gap: 20px;
@@ -7,7 +7,7 @@
 }
 
 @media screen and (max-width: 400px) {
-  .elements {
+  .elements__item {
     width: 90%;
   }
 }

@@ -13,7 +13,7 @@ let profileAbout = document.querySelector('.profile__text');
 
 const cardTemplate = document.querySelector('#card__template').content;
 const cardElement = cardTemplate.querySelector('.element').cloneNode(true);
-const cards = document.querySelector('.element__table');
+const cards = document.querySelector('.elements__table');
 
 const local = document.querySelector('.location');
 const createButton = document.querySelector('.location__create-button');
