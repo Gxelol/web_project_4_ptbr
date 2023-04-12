@@ -135,9 +135,3 @@ cardElement.querySelector(".element__like").addEventListener("click", likeElemen
 
 cardElement.querySelector('.element__delete').addEventListener("click", deleteElement);
 
-// for (i = 0; i < elementImage.length; i++) {
-//     elementImage[i].addEventListener("click", openImage);
-//     const imageUrl = elementImage[i].getAttribute("src");
-//   }
-
-//   console.log(imagePicture);
