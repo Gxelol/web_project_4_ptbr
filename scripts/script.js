@@ -11,16 +11,18 @@ const addButton = document.querySelector('.profile__add-button');
 let profileName = document.querySelector('.profile__title');
 let profileAbout = document.querySelector('.profile__text');
 
-const element = document.querySelector('.element');
 const cardTemplate = document.querySelector('#card__template').content;
-const cards = document.querySelector('.element__table');
-let elementTitle = document.querySelector('.element__title');
-let elementImage = document.querySelector('.element__image');
 const cardElement = cardTemplate.querySelector('.element').cloneNode(true);
+const cards = document.querySelector('.element__table');
 
 const local = document.querySelector('.location');
 const createButton = document.querySelector('.location__create-button');
 const closeLocalButton = document.querySelector('.location__close-button');
+
+const imageContainer = document.querySelector('.image__container');
+const closeImageButton = document.querySelector('.image__close-button');
+const imageItem = document.querySelector('.image__item');
+const imageDescription = document.querySelector('.image__description');
 
 const initialCards = [
   {
@@ -54,8 +56,23 @@ initialCards.forEach(function(card, i) {
   cardElement.querySelector('.element__image').src = card.link;
   cardElement.querySelector('.element__title').textContent = card.name;
 
-  cardElement.querySelector(".element__like").addEventListener("click", likeElement);
+  //OPEN IMAGE
+  cardElement.querySelector('.element__image').addEventListener("click", function () {
+    imageItem.setAttribute("src", card.link);
+    imageContainer.querySelector('.image__description').textContent = card.name;
 
+    imageContainer.style.visibility = "visible";
+    imageContainer.style.opacity = "1";
+    transparentContainer.style.visibility = "visible";
+    transparentContainer.style.opacity = "1";
+  });
+
+  //LIKE CARD
+  cardElement.querySelector(".element__like").addEventListener("click", function (e) {
+    e.target.classList.toggle("element__like_active");
+  });
+
+  //DELETE CARD
   cardElement.querySelector('.element__delete').addEventListener("click", function () {
     cardElement.remove();
   });
@@ -64,44 +81,69 @@ initialCards.forEach(function(card, i) {
 })
 
 function openLocal() {
-  local.style.display = "flex";
-  transparentContainer.style.display = "flex";
+  local.style.visibility = "visible";
+  local.style.opacity = "1";
+  transparentContainer.style.visibility = "visible";
+  transparentContainer.style.opacity = "1";
 }
 
 function createLocal( inputTitle, inputUrl) {
+  const cardElement = cardTemplate.querySelector('.element').cloneNode(true);
   cardElement.querySelector('.element__title').textContent = inputTitle;
   cardElement.querySelector('.element__image').src = inputUrl;
 
+  //LIKE CARD
+  cardElement.querySelector(".element__like").addEventListener("click", function (e) {
+    e.target.classList.toggle("element__like_active");
+  });
+
+  //DELETE CARD
+  cardElement.querySelector('.element__delete').addEventListener("click", function deleteElement() {
+    cardElement.remove();
+  });
+
+  //OPEN IMAGE
+  cardElement.querySelector('.element__image').addEventListener("click", function openImage() {
+    imageItem.setAttribute("src", cardElement.querySelector('.element__image').src);
+    imageContainer.querySelector('.image__description').textContent = cardElement.querySelector('.element__title').textContent;
+
+    imageContainer.style.visibility = "visible";
+    imageContainer.style.opacity = "1";
+    transparentContainer.style.visibility = "visible";
+    transparentContainer.style.opacity = "1";
+  });
+
+  //ADD TO DOM
   cards.prepend(cardElement);
 
-  local.style.display = "none";
-  transparentContainer.style.display = "none";
+  local.style.visibility = "hidden";
+  local.style.opacity = "0";
+  transparentContainer.style.visibility = "hidden";
+  transparentContainer.style.opacity = "0";
 };
 
 function closeLocal() {
-  local.style.display = "none";
-  transparentContainer.style.display = "none";
-}
-
-function likeElement(e) {
-  e.target.classList.toggle("element__like_active");
-}
-
-function deleteElement() {
-  cardElement.remove();
+  local.style.visibility = "hidden";
+  local.style.opacity = "0";
+  transparentContainer.style.visibility = "hidden";
+  transparentContainer.style.opacity = "0";
 }
 
 function openPopup() {
+  popup.style.visibility = "visible";
+  popup.style.opacity = "1";
+  transparentContainer.style.visibility = "visible";
+  transparentContainer.style.opacity = "1";
+
   inputName.value = profileName.textContent;
   inputAbout.value = profileAbout.textContent;
-
-  popup.style.display = "flex";
-  transparentContainer.style.display = "flex";
 }
 
 function closePopup() {
-  popup.style.display = "none";
-  transparentContainer.style.display = "none";
+  popup.style.visibility = "hidden";
+  popup.style.opacity = "0";
+  transparentContainer.style.visibility = "hidden";
+  transparentContainer.style.opacity = "0";
 }
 
 createButton.addEventListener("click", function (evt) {
@@ -121,9 +163,18 @@ saveButton.addEventListener("click", function saveContent(event) {
 
   profileName.textContent = inputName.value;
   profileAbout.textContent = inputAbout.value;
-  popup.style.display = "none";
-  transparentContainer.style.display = "none";
+  popup.style.visibility = "hidden";
+  popup.style.opacity = "0";
+  transparentContainer.style.visibility = "hidden";
+  transparentContainer.style.opacity = "0";
 });
+
+function closeImage() {
+  imageContainer.style.visibility = "hidden";
+  imageContainer.style.opacity = "0";
+  transparentContainer.style.visibility = "hidden";
+  transparentContainer.style.opacity = "0";
+}
 
 addButton.addEventListener("click", openLocal);
 closeLocalButton.addEventListener("click", closeLocal);
@@ -131,7 +182,4 @@ closeLocalButton.addEventListener("click", closeLocal);
 editButton.addEventListener("click", openPopup);
 closePopupButton.addEventListener("click", closePopup);
 
-cardElement.querySelector(".element__like").addEventListener("click", likeElement);
-
-cardElement.querySelector('.element__delete').addEventListener("click", deleteElement);
-
+closeImageButton.addEventListener("click", closeImage);
