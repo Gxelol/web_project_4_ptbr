@@ -32,59 +32,25 @@
           <button class="profile__add-button"><i class="fa-solid fa-plus"></i></button>
         </section>
 
-        <section class="elements">
+        <section class="table">
           <h2 class="elements__title">Elements</h2>
+          <ul class="element__table elements">
 
-          <div class="element">
-            <img src="./images/yosemite_valley.svg" alt="um rio envolto de árvores e montanhas ao fundo" class="element__image">
-            <button class="element__delete"><i class="fa-solid fa-trash"></i></button>
-            <div class="element__description">
-              <p class="element__title">Vale de Yosemite</p>
-              <button class="element__like"><i class="fa-regular fa-heart"></i></button>
-            </div>
-          </div>
-          <div class="element">
-            <img src="./images/louise_lake.svg" alt="um lago de águas claras com montanhas gélidas ao fundo" class="element__image">
-            <button class="element__delete"><i class="fa-solid fa-trash"></i></button>
-            <div class="element__description">
-              <p class="element__title">Lago Louise</p>
-              <button class="element__like"><i class="fa-regular fa-heart"></i></button>
-            </div>
-          </div>
-          <div class="element">
-            <img src="./images/mountain.svg" alt="montanhas com um por sol" class="element__image">
-            <button class="element__delete"><i class="fa-solid fa-trash"></i></button>
-            <div class="element__description">
-              <p class="element__title">Montanhas Carecas</p>
-              <button class="element__like"><i class="fa-regular fa-heart"></i></button>
-            </div>
-          </div>
-          <div class="element">
-            <img src="./images/latemar.svg" alt="montanhas em um céu estrelado" class="element__image">
-            <button class="element__delete"><i class="fa-solid fa-trash"></i></button>
-            <div class="element__description">
-              <p class="element__title">Latemar</p>
-              <button class="element__like"><i class="fa-regular fa-heart"></i></button>
-            </div>
-          </div>
-          <div class="element">
-            <img src="./images/vanoise.svg" alt="montanhas pequenas que cercam um lago" class="element__image">
-            <button class="element__delete"><i class="fa-solid fa-trash"></i></button>
-            <div class="element__description">
-              <p class="element__title">Vanoise National</p>
-              <button class="element__like"><i class="fa-regular fa-heart"></i></button>
-            </div>
-          </div>
-          <div class="element">
-            <img src="./images/lago_di_braies.svg" alt="montanhas cobertas por neve e barcos de pequeno porte atracados em um porto em águas claras" class="element__image">
-            <button class="element__delete"><i class="fa-solid fa-trash"></i></button>
-            <div class="element__description">
-              <p class="element__title">Lado di braies</p>
-              <button class="element__like"><i class="fa-regular fa-heart"></i></button>
-            </div>
-          </div>
+          </ul>
         </section>
       </main>
+
+      <template id="card__template">
+        <li class="element">
+          <img src="./images/yosemite_valley.svg" alt="um rio envolto de árvores e montanhas ao fundo" class="element__image">
+          <button class="element__delete"><i class="fa-solid fa-trash"></i></button>
+          <div class="element__description">
+            <p class="element__title">Vale de Yosemite</p>
+            <button class="element__like"><i class="fa-regular fa-heart"></i></button>
+          </div>
+        </li>
+      </template>
+
 
       <footer class="footer">
         <p class="copyright">&copy; 2021 Around the U.S.</p>
@@ -99,20 +65,20 @@
       <form class="popup__form">
         <input type="text" name="name" placeholder="Nome" class="popup__input popup__input-name">
         <input type="text" name="about" placeholder="Sobre mim" class="popup__input popup__input-about">
-        <button type="submit" class="popup__submit-button">Salvar
+        <button type="submit" class="popup__save-button">Salvar
         <button>
       </form>
     </div>
 
-    <div class="popup__location">
-      <h2 class="popup__title">Novo local</h2>
-      <button class="popup__close-button">
+    <div class="location">
+      <h2 class="location__title">Novo local</h2>
+      <button class="location__close-button">
           <i class="fa-solid fa-x"></i>
       </button>
-      <form class="popup__form">
-        <input type="text" name="name" placeholder="Título" class="popup__input popup__input-name">
-        <input type="text" name="about" placeholder="Link de imagem" class="popup__input popup__input-about">
-        <button type="submit" class="popup__submit-button">Criar
+      <form class="location__form">
+        <input type="text" name="title" placeholder="Título" class="location__input location__input-title">
+        <input type="text" name="url" placeholder="Link de imagem" class="location__input location__input-url">
+        <button type="submit" class="location__create-button">Criar
         <button>
       </form>
     </div>
