@@ -10,7 +10,3 @@
 .element__like:hover {
   opacity: 0.6;
 }
-
-.element__like:active {
-  background: #000000;
-}
