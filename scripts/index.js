@@ -187,6 +187,8 @@ function closeImage() {
   transparentContainer.style.opacity = "0";
 }
 
+document.querySelector('.footer__year').textContent = new Date().getFullYear();
+
 addButton.addEventListener("click", openLocal);
 closeLocalButton.addEventListener("click", closeLocal);
 
