@@ -27,32 +27,32 @@ const imageDescription = document.querySelector('.image__description');
 const initialCards = [
   {
     name: "Vale de Yosemite",
-    link: "../images/yosemite_valley.svg",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg",
     alt: "Um Rio envolto de árvores com uma montanha ao fundo",
   },
   {
     name: "Lago Louise",
-    link: "../images/louise_lake.svg",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lake-louise.jpg",
     alt: "Uma lagoa com montanhas geladas ao fundo",
   },
   {
     name: "Montanhas Carecas",
-    link: "../images/mountain.svg",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_bald-mountains.jpg",
     alt: "Paisagem de montanhas com um pôr do sol ao fundo",
   },
   {
     name: "Latemar",
-    link: "../images/latemar.svg",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_latemar.jpg",
     alt: "céu estrelado com uma grande montanha pontiaguda",
   },
   {
     name: "Parque Nacional da Vanoise ",
-    link: "../images/vanoise.svg",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_vanoise.jpg",
     alt: "lago que reflete uma montanha na paisagem",
   },
   {
     name: "Lago di Braies",
-    link: "../images/lago_di_braies.svg",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lago.jpg",
     alt: "um pequeno porto com barquinhos no lago e duas grandes montanhas cobertas em neve ao fundo",
   }
 ];
