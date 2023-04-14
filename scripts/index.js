@@ -28,26 +28,32 @@ const initialCards = [
   {
     name: "Vale de Yosemite",
     link: "../images/yosemite_valley.svg",
+    alt: "Um Rio envolto de árvores com uma montanha ao fundo",
   },
   {
     name: "Lago Louise",
     link: "../images/louise_lake.svg",
+    alt: "Uma lagoa com montanhas geladas ao fundo",
   },
   {
     name: "Montanhas Carecas",
     link: "../images/mountain.svg",
+    alt: "Paisagem de montanhas com um pôr do sol ao fundo",
   },
   {
     name: "Latemar",
     link: "../images/latemar.svg",
+    alt: "céu estrelado com uma grande montanha pontiaguda",
   },
   {
     name: "Parque Nacional da Vanoise ",
     link: "../images/vanoise.svg",
+    alt: "lago que reflete uma montanha na paisagem",
   },
   {
     name: "Lago di Braies",
     link: "../images/lago_di_braies.svg",
+    alt: "um pequeno porto com barquinhos no lago e duas grandes montanhas cobertas em neve ao fundo",
   }
 ];
 
@@ -55,6 +61,7 @@ initialCards.forEach(function(card, i) {
   const cardElement = cardTemplate.querySelector('.element').cloneNode(true);
   cardElement.querySelector('.element__image').src = card.link;
   cardElement.querySelector('.element__title').textContent = card.name;
+  cardElement.querySelector('.element__image').alt = card.alt;
 
   //OPEN IMAGE
   cardElement.querySelector('.element__image').addEventListener("click", function () {
@@ -91,6 +98,7 @@ function createLocal( inputTitle, inputUrl) {
   const cardElement = cardTemplate.querySelector('.element').cloneNode(true);
   cardElement.querySelector('.element__title').textContent = inputTitle;
   cardElement.querySelector('.element__image').src = inputUrl;
+  cardElement.querySelector('.element__image').alt = inputTitle;
 
   //LIKE CARD
   cardElement.querySelector(".element__like").addEventListener("click", function (e) {
