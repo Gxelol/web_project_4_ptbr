@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./pages/index.css">
-    <script src="https://kit.fontawesome.com/8fedffd2fc.js" crossorigin="anonymous"></script>
     <title>Project 4</title>
   </head>
   <body class="container">
@@ -26,10 +25,10 @@
               <p class="profile__text">Explorar</p>
             </div>
 
-            <button class="profile__edit-button" onclick="openPopup()"><i class="fa-solid fa-pen"></i></button>
+            <button class="profile__edit-button" onclick="openPopup()"><img src="./images/Vectoredit.svg" alt="Botão editar"></button>
           </div>
 
-          <button class="profile__add-button"><i class="fa-solid fa-plus"></i></button>
+          <button class="profile__add-button"><img src="./images/Vectorplus.svg" alt="Botão adicionar"></button>
         </section>
 
         <section class="elements">
@@ -43,14 +42,13 @@
       <template id="card__template">
         <li class="element">
           <img src="./images/yosemite_valley.svg" alt="um rio envolto de árvores e montanhas ao fundo" class="element__image">
-          <button class="element__delete"><i class="fa-solid fa-trash"></i></button>
+          <button class="element__delete"><img src="./images/Trashclose.svg"></i></button>
           <div class="element__description">
             <p class="element__title">Vale de Yosemite</p>
-            <button class="element__like"><i class="fa-regular fa-heart"></i></button>
+            <button class="element__like"><img src="./images/VectorheartEmpty.svg" alt="Botão curtir"></button>
           </div>
         </li>
       </template>
-
 
       <footer class="footer">
         <p class="copyright">&copy; 2021 Around the U.S.</p>
@@ -60,7 +58,7 @@
     <div class="popup">
       <h2 class="popup__title">Editar perfil</h2>
       <button class="popup__close-button">
-          <i class="fa-solid fa-x"></i>
+          <img src="./images/Close Iconclose.svg" alt="Botão fechar">
       </button>
       <form class="popup__form">
         <input type="text" name="name" placeholder="Nome" class="popup__input popup__input-name">
@@ -73,7 +71,7 @@
     <div class="location">
       <h2 class="location__title">Novo local</h2>
       <button class="location__close-button">
-          <i class="fa-solid fa-x"></i>
+        <img src="./images/Close Iconclose.svg">
       </button>
       <form class="location__form">
         <input type="text" name="title" placeholder="Título" class="location__input location__input-title">
@@ -85,7 +83,7 @@
 
     <div class="image">
       <button class="image__close-button">
-        <i class="fa-solid fa-x"></i>
+        <img src="./images/Close Iconclose.svg">
       </button>
       <img src="./images/mountain.svg" alt="Imagem tamanho real após o clique" class="image__item">
       <p class="image__description">Vale de Yosemite</p>
