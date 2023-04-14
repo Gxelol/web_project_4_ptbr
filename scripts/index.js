@@ -1,15 +1,15 @@
 const popup = document.querySelector('.popup');
 const closePopupButton = document.querySelector('.popup__close-button');
 const saveButton = document.querySelector('.popup__save-button');
-let inputName = document.querySelector('.popup__input-name');
-let inputAbout = document.querySelector('.popup__input-about');
+const inputName = document.querySelector('.popup__input-name');
+const inputAbout = document.querySelector('.popup__input-about');
 
 const transparentContainer = document.querySelector('.container__semitransparent');
 
 const editButton = document.querySelector('.profile__edit-button');
 const addButton = document.querySelector('.profile__add-button');
-let profileName = document.querySelector('.profile__title');
-let profileAbout = document.querySelector('.profile__text');
+const profileName = document.querySelector('.profile__title');
+const profileAbout = document.querySelector('.profile__text');
 
 const cardTemplate = document.querySelector('#card__template').content;
 const cardElement = cardTemplate.querySelector('.element').cloneNode(true);
@@ -116,6 +116,9 @@ function createLocal( inputTitle, inputUrl) {
   //ADD TO DOM
   cards.prepend(cardElement);
 
+  inputTitle = "";
+  inputUrl = "";
+
   local.style.visibility = "hidden";
   local.style.opacity = "0";
   transparentContainer.style.visibility = "hidden";
@@ -149,8 +152,8 @@ function closePopup() {
 createButton.addEventListener("click", function (evt) {
   evt.preventDefault();
 
-  let inputTitle = document.querySelector('.location__input-title');
-  let inputUrl = document.querySelector('.location__input-url');
+  const inputTitle = document.querySelector('.location__input-title');
+  const inputUrl = document.querySelector('.location__input-url');
 
   createLocal(inputTitle.value, inputUrl.value);
 
