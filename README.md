@@ -15,4 +15,4 @@
 
 **Link**
 
-Take a look at the project: [Link to the project at Github Pages](https://gxelol.github.io/web_project_4_ptbr_/)
+Take a look at the project: [Link to the project at Github Pages](https://gxelol.github.io/web_project_4_ptbr/)
