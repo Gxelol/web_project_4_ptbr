@@ -124,8 +124,8 @@ function createLocal( inputTitle, inputUrl) {
   //ADD TO DOM
   cards.prepend(cardElement);
 
-  inputTitle = "";
-  inputUrl = "";
+  document.querySelector(".location__input-title").value = "";
+  document.querySelector(".location__input-url").value = "";
 
   local.style.visibility = "hidden";
   local.style.opacity = "0";
