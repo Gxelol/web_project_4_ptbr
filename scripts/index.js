@@ -165,8 +165,8 @@ createButton.addEventListener("click", function (evt) {
 
   createLocal(inputTitle.value, inputUrl.value);
 
-  inputTitle = "";
-  inputUrl = "";
+  inputTitle.value = "";
+  inputUrl.value = "";
 });
 
 saveButton.addEventListener("click", function saveContent(event) {
