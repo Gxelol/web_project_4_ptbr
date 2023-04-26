@@ -60,11 +60,35 @@
       <button class="popup__close-button">
           <img src="./images/Close Iconclose.svg" alt="Botão fechar">
       </button>
-      <form class="popup__form">
-        <input type="text" name="name" placeholder="Nome" class="popup__input popup__input-name">
-        <input type="text" name="about" placeholder="Sobre mim" class="popup__input popup__input-about">
-        <button type="submit" class="popup__save-button">Salvar
-        </button>
+      <form class="popup__form" novalidate>
+        <fieldset class="popup__set">
+          <input
+          type="text"
+          name="name"
+          placeholder="Nome"
+          class="popup__input popup__input-name"
+          required
+          id="name-input"
+          minlength="2"
+          maxlength="40"
+          >
+          <span class="popup__placeholder name-input-error"></span>
+
+          <input
+          type="text"
+          name="about"
+          placeholder="Sobre mim"
+          class="popup__input popup__input-about"
+          id="about-input"
+          required
+          minlength="2"
+          maxlength="200"
+          >
+
+          <span class="popup__placeholder about-input-error"></span>
+          <button type="submit" class="popup__submit popup__save-button">Salvar
+          </button>
+        </fieldset>
       </form>
     </div>
 
@@ -73,11 +97,30 @@
       <button class="location__close-button">
         <img src="./images/Close Iconclose.svg">
       </button>
-      <form class="location__form">
-        <input type="text" name="title" placeholder="Título" class="location__input location__input-title">
-        <input type="text" name="url" placeholder="Link de imagem" class="location__input location__input-url">
-        <button type="submit" class="location__create-button">Criar
-        </button>
+      <form class="popup__form" novalidate>
+        <fieldset class="popup__set">
+          <input
+          type="text"
+          name="title"
+          placeholder="Título"
+          class="popup__input location__input-title"
+          id="title-input"
+          required
+          minlength="2"
+          maxlength="30">
+          <span class="location__placeholder title-input-error"></span>
+          <input
+          type="url"
+          name="url"
+          placeholder="Link de imagem"
+          class="popup__input location__input-url"
+          id="url-input"
+          required
+          >
+          <span class="location__placeholder url-input-error"></span>
+          <button type="submit" class="popup__submit location__create-button">Criar
+          </button>
+        </fieldset>
       </form>
     </div>
 
