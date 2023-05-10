@@ -95,10 +95,10 @@ const formConfig = {
   errorClass: "popup__input-error_active"
 };
 
-const editProfileValidation = new FormValidator(formConfig, ".form_type_edit-profile");
+const editProfileValidation = new FormValidator(formConfig, ".popup__form_edit-profile");
 editProfileValidation.enableValidation();
 
-const ImageValidation = new FormValidator(formConfig, ".form_type_add-image");
+const ImageValidation = new FormValidator(formConfig, ".popup__form_local");
 ImageValidation.enableValidation();
 
 
