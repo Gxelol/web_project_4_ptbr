@@ -32,7 +32,7 @@ const cardList = new Section({
   renderer: (item) => {
     const cardElement = createCard(item);
     cardList.addItem(cardElement);
-  }
+  },
 }, data.cardSelector);
 
 cardList.renderItems();
@@ -53,6 +53,20 @@ data.editButton.addEventListener("click", () => {
 });
 
 popup.setEventListeners();
+
+const addCard = new PopupWithForm({
+  popupSelector: ".location",
+  handleSubmit: (cardItem) => {
+    const cardElement = createCard(cardItem);
+    document.querySelector(data.cardSelector).prepend(cardElement);
+  },
+});
+
+addCard.setEventListeners();
+
+data.addButton.addEventListener("click", () => {
+  addCard.open();
+});
 
 const formConfig = {
   inputSelector: ".popup__input",
