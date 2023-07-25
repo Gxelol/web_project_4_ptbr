@@ -1,32 +1,32 @@
 export const initialCards = [
   {
-    name: "Vale de Yosemite",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg",
+    title: "Vale de Yosemite",
+    url: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg",
     alt: "Um Rio envolto de árvores com uma montanha ao fundo",
   },
   {
-    name: "Lago Louise",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lake-louise.jpg",
+    title: "Lago Louise",
+    url: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lake-louise.jpg",
     alt: "Uma lagoa com montanhas geladas ao fundo",
   },
   {
-    name: "Montanhas Carecas",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_bald-mountains.jpg",
+    title: "Montanhas Carecas",
+    url: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_bald-mountains.jpg",
     alt: "Paisagem de montanhas com um pôr do sol ao fundo",
   },
   {
-    name: "Latemar",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_latemar.jpg",
+    title: "Latemar",
+    url: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_latemar.jpg",
     alt: "céu estrelado com uma grande montanha pontiaguda",
   },
   {
-    name: "Parque Nacional da Vanoise ",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_vanoise.jpg",
+    title: "Parque Nacional da Vanoise ",
+    url: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_vanoise.jpg",
     alt: "lago que reflete uma montanha na paisagem",
   },
   {
-    name: "Lago di Braies",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lago.jpg",
+    title: "Lago di Braies",
+    url: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lago.jpg",
     alt: "um pequeno porto com barquinhos no lago e duas grandes montanhas cobertas em neve ao fundo",
   },
 ];
