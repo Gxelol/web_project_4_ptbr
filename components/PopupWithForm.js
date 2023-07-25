@@ -10,10 +10,7 @@ export default class PopupWithForm extends Popup {
 
   _getInputValues() {
     const inputs = document.querySelectorAll('input');
-    console.log(inputs);
     inputs.forEach((input) => {
-      console.log(input.name);
-      console.log(input.value);
       this._formValues[input.name] = input.value;
     });
 
