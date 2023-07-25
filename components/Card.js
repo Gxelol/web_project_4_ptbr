@@ -3,9 +3,8 @@ import renderCards from '../utils/utils.js';
 
 export default class Card {
   constructor({item, cardSelector, handleCardClick}) {
-    this._name = item.name;
-    this._link = item.link;
-    this._alt = item.alt;
+    this._name = item.title;
+    this._link = item.url;
     this._cardSelector = cardSelector;
     this._handleCardClick = handleCardClick;
   }
@@ -26,7 +25,7 @@ export default class Card {
 
     this._element.querySelector(".element__title").textContent = this._name;
     this._element.querySelector(".element__image").src = this._link;
-    this._element.querySelector(".element__image").alt = this._alt;
+    this._element.querySelector(".element__image").alt = this._name;
 
     return this._element;
   }
