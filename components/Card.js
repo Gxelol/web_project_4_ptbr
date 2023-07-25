@@ -31,42 +31,38 @@ export default class Card {
     return this._element;
   }
 
-  _setEventListeners() {
-    //LIKE CARD
-    this._element
-      .querySelector(".element__like")
-      .addEventListener("click", (e) => {
-        e.target.classList.toggle("element__like_active");
-      });
-
+  _setDelete() {
     //DELETE CARD
     this._element
       .querySelector(".element__delete")
       .addEventListener("click", () => {
         this._handleDeleteElement();
       });
+  }
 
+  _setLike() {
+    //LIKE CARD
+    this._element
+      .querySelector(".element__like")
+      .addEventListener("click", (e) => {
+        e.target.classList.toggle("element__like_active");
+      });
+  }
+
+  _openImage() {
     //OPEN IMAGE
     this._element
       .querySelector(".element__image")
       .addEventListener("click", () => {
-        this._handleOpenImage();
+        this._handleCardClick();
       });
   }
 
-  _handleOpenImage = () => {
-    data.imageItem.setAttribute(
-      "src",
-      this._element.querySelector(".element__image").src
-    );
-    data.imageContainer.querySelector(".image__description").textContent =
-      this._element.querySelector(".element__title").textContent;
-
-    data.imageContainer.style.visibility = "visible";
-    data.imageContainer.style.opacity = "1";
-    data.transparentContainer.style.visibility = "visible";
-    data.transparentContainer.style.opacity = "1";
-  };
+  _setEventListeners() {
+    this._setDelete();
+    this._setLike();
+    this._openImage();
+  }
 
   _handleDeleteElement() {
     this._element.remove();
