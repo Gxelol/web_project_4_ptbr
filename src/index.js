@@ -39,7 +39,7 @@ const cardList = new Section({
 cardList.renderItems();
 
 const popup = new PopupWithForm({
-  popupSelector: '.profile__popup',
+  popupSelector: '.popup',
   handleSubmit: () => {
     userInfo.setUserInfo();
   }
