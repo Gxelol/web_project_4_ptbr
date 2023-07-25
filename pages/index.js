@@ -17,8 +17,8 @@ function createCard(item) {
     item: item,
     cardSelector: ".element",
     handleCardClick: () => {
-      const imagePopup = new PopupWithImage('#card__template');
-      imagePopup._setEventListeners();
+      const imagePopup = new PopupWithImage('.image');
+      imagePopup.setEventListeners();
       imagePopup.open(cardElement);
     }
   });
