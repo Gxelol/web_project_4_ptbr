@@ -11,7 +11,9 @@
 
   Update: Now the landing page has forms validation, delete button and like button. I used Javascript to perform all the validation, try adding something without the url or just type a letter to see how it works.
 
-  Update 0.2: Change to classes, Card and FormValidator, for more maintainability, reusability and scalability.
+  Update 2.0: Change to classes, Card and FormValidator, for more maintainability, reusability and scalability.
+
+  Update 3.0: Create section, user and popup classes. Now, it's easier to reuse and understand the code, besides, it is a cleaner and more organized code. Was added webpack and babel plugin for packing and preprocessing.
 
 **Figma**
 
