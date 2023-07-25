@@ -56,8 +56,9 @@ popup.setEventListeners();
 
 const addCard = new PopupWithForm({
   popupSelector: ".location",
-  handleSubmit: (cardItem) => {
-    const cardElement = createCard(cardItem);
+  handleSubmit: (card) => {
+    console.log(card);
+    const cardElement = createCard(card);
     document.querySelector(data.cardSelector).prepend(cardElement);
   },
 });
