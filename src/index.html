@@ -24,6 +24,7 @@
             alt="Foto de perfil"
             class="profile__image"
           />
+          <div class="profile__image_edit-button"></div>
           <div class="profile__info">
             <div>
               <h1 class="profile__title">Jacques Cousteau</h1>
@@ -47,7 +48,7 @@
       </main>
 
       <template id="card__template">
-        <li class="element">
+        <li class="element" id="">
           <img
             src="./images/yosemite_valley.svg"
             alt="um rio envolto de árvores e montanhas ao fundo"
@@ -58,9 +59,12 @@
           </button>
           <div class="element__description">
             <p class="element__title">Vale de Yosemite</p>
-            <button class="element__like">
-              <img src="<%=require('./images/VectorheartEmpty.svg')%>" alt="Botão curtir" />
-            </button>
+            <div class="element__button-container">
+              <button class="element__like">
+                <img src="<%=require('./images/VectorheartEmpty.svg')%>" alt="Botão curtir" />
+              </button>
+              <p class="element__counter"></p>
+            </div>
           </div>
         </li>
       </template>
@@ -81,7 +85,7 @@
         <fieldset class="popup__set">
           <input
             type="text"
-            name="name"
+            name="nameP"
             placeholder="Nome"
             class="popup__input popup__input-name"
             required
@@ -119,7 +123,7 @@
         <fieldset class="popup__set">
           <input
             type="text"
-            name="title"
+            name="name"
             placeholder="Título"
             class="popup__input popup__input-name location__input-title"
             id="title-input"
@@ -130,7 +134,7 @@
           <span class="popup__placeholder title-input-error"></span>
           <input
             type="url"
-            name="url"
+            name="link"
             placeholder="Link de imagem"
             class="popup__input location__input-url"
             id="url-input"
@@ -154,6 +158,39 @@
         class="image__item"
       />
       <p class="image__description">Vale de Yosemite</p>
+    </div>
+
+    <div class="popup confirmation">
+      <button class="confirmation__close-button">
+        <img src="<%=require('./images/CloseIconclose.svg')%>" alt="Botão fechar" />
+      </button>
+      <p class="confirmation__description">Tem certeza?</p>
+      <form class="confirmation__form" novalidate>
+        <button type="submit" class="popup__submit confirmation__button">
+          Sim
+        </button>
+      </form>
+    </div>
+
+    <div class="popup edit-profile">
+      <button class="edit-profile__close-button">
+        <img src="<%=require('./images/CloseIconclose.svg')%>" alt="Botão fechar" />
+      </button>
+      <p class="edit-profile__description">Alterar a foto de perfil</p>
+        <form class="popup__form edit-profile__form" name="form_edit-profile" novalidate>
+          <input
+              type="url"
+              name="linkProfilePic"
+              placeholder="Link"
+              class="popup__input edit-profile__input-url"
+              id="edit-profile-input"
+              required
+            />
+            <span class="edit-profile_placeholder edit-profile-input-error"></span>
+          <button type="submit" class="popup__submit edit-profile__button">
+            Salvar
+          </button>
+        </form>
     </div>
 
   </body>
