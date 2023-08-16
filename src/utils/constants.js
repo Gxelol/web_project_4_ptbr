@@ -12,7 +12,7 @@ export const transparentContainer = document.querySelector(
 );
 
 export const editButton = document.querySelector(".profile__edit-button");
-export const editProfileButton = document.querySelector(".profile__picture_edit-button");
+export const editProfileButton = document.querySelector(".profile__edit-pic-button");
 export const addButton = document.querySelector(".profile__add-button");
 export const profileId = '';
 export const profileName = document.querySelector(".profile__title");
