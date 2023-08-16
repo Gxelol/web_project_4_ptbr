@@ -1,4 +1,4 @@
-.profile__image_edit-button {
+.profile__picture_edit-button {
   position: absolute;
   background: none;
   z-index: 1;
@@ -7,7 +7,7 @@
   border-radius: 50%;
 }
 
-.profile__image_edit-button:hover {
+.profile__picture_edit-button:hover {
   background-image: url('../../../../images/Vectoredit.svg');
   background-repeat: no-repeat;
   background-position: center;
