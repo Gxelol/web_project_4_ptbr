@@ -1,10 +1,15 @@
 import * as data from '../utils/constants.js';
 import renderCards from '../utils/utils.js';
 
+import { api } from '../index.js';
+
 export default class Card {
   constructor({item, cardSelector, handleCardClick}) {
-    this._name = item.title;
-    this._link = item.url;
+    this._name = item.name;
+    this._link = item.link;
+    this._id = item._id;
+    this._likes = item.likes;
+    this._owner = item.owner;
     this._cardSelector = cardSelector;
     this._handleCardClick = handleCardClick;
   }
@@ -26,6 +31,7 @@ export default class Card {
     this._element.querySelector(".element__title").textContent = this._name;
     this._element.querySelector(".element__image").src = this._link;
     this._element.querySelector(".element__image").alt = this._name;
+    this._element.querySelector(".element__counter").textContent = this._likes.length;
 
     return this._element;
   }
@@ -35,6 +41,7 @@ export default class Card {
     this._element
       .querySelector(".element__delete")
       .addEventListener("click", () => {
+        api.deleteCard(this._id).then(res => console.log(res))
         this._handleDeleteElement();
       });
   }
@@ -44,7 +51,20 @@ export default class Card {
     this._element
       .querySelector(".element__like")
       .addEventListener("click", (e) => {
-        e.target.classList.toggle("element__like_active");
+        if (this._element.querySelector(".element__like").classList.contains("element__like_active")) {
+          api.deleteLike(this._id).then((likeArr) => {
+            console.log(likeArr);
+            this._element.querySelector('.element__counter').textContent = likeArr.likes.length;
+            this._element.querySelector(".element__like").classList.remove("element__like_active");
+          })
+        }
+        else {
+          api.likeCard(this._id).then((likeArr) => {
+            console.log(likeArr);
+            this._element.querySelector('.element__counter').textContent = likeArr.likes.length;
+            this._element.querySelector(".element__like").classList.add("element__like_active");
+          })
+        }
       });
   }
 
