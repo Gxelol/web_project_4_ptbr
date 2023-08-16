@@ -1,20 +1,12 @@
 import Popup from "./Popup.js";
-
+import { api } from '../index.js';
+import * as data from '../utils/constants.js';
+import { confirm } from '../index.js';
 export default class PopupWithForm extends Popup {
   constructor({popupSelector, handleSubmit}) {
     super(popupSelector);
     this._handleSubmit = handleSubmit;
     this._formElement = this._element.querySelector('form');
-    this._formValues = {};
-  }
-
-  _getInputValues() {
-    const inputs = document.querySelectorAll('input');
-    inputs.forEach((input) => {
-      this._formValues[input.name] = input.value;
-    });
-
-    return this._formValues;
   }
 
   setEventListeners() {
@@ -23,7 +15,14 @@ export default class PopupWithForm extends Popup {
     this._formElement.addEventListener("submit", (evt) => {
       evt.preventDefault();
 
-      this._handleSubmit(this._getInputValues());
+      if (this._formElement.classList.contains('popup__form_local')) {
+        api.addNewCard(data.inputTitle.value, data.inputUrl.value).then((card) => {
+          this._handleSubmit(card);
+        })
+      }else {
+        this._handleSubmit();
+      }
+
 
       this.close();
     });

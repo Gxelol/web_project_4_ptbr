@@ -32,6 +32,10 @@ export default class Popup {
       this.close();
     });
 
+    data.closeConfirmationButton.addEventListener("click", () => {
+      this.close();
+    });
+
     data.closeImageButton.addEventListener("click", () => {
       this.close();
     });
