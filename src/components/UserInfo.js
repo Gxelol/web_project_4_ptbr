@@ -1,5 +1,5 @@
 import * as data from '../utils/constants.js';
-
+import { api } from '../index.js';
 export default class UserInfo {
   constructor({ nameSelector, aboutSelector }) {
     this._name = document.querySelector(nameSelector);
@@ -15,7 +15,9 @@ export default class UserInfo {
   }
 
   setUserInfo() {
-    this._name.textContent = data.inputName.value;
-    this._about.textContent = data.inputAbout.value;
+    api.editProfile(data.inputName.value, data.inputAbout.value).then((profile) => {
+      this._name.textContent = profile.name;
+      this._about.textContent = profile.about;
+    })
   }
 }
