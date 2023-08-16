@@ -15,6 +15,8 @@
 
   Update 3.0: Create section, user and popup classes. Now, it's easier to reuse and understand the code, besides, it is a cleaner and more organized code. Was added webpack and babel plugin for packing and preprocessing.
 
+  Update 4.0: Get and set everything with an API. Now, with a server and an authorization you can have a "social media", seeing others cards, liking and disliking according to your will.
+
 **Figma**
 
 * [Link to the project at Figma](https://www.figma.com/file/XfB6BSINvliub43JgKza1e/WEB.-Sprint-4.-Around-The-U.S.-desktop-%2B-mobile-pt?node-id=0-1&t=eLFdrcNIQhaEIinR-0)
