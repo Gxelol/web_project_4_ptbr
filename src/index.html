@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 4</title>
   </head>
   <body class="container">
@@ -23,7 +23,7 @@
             src="<%=require('./images/jacques.svg')%>"
             alt="Foto de perfil"
             class="profile__image"
-          />
+          >
           <div class="profile__image_edit-button"></div>
           <div class="profile__info">
             <div>
@@ -32,12 +32,12 @@
             </div>
 
             <button class="profile__edit-button">
-              <img src="<%=require('./images/Vectoredit.svg')%>" alt="Botão editar" />
+              <img src="<%=require('./images/Vectoredit.svg')%>" alt="Botão editar">
             </button>
           </div>
 
           <button class="profile__add-button">
-            <img src="<%=require('./images/Vectorplus.svg')%>" alt="Botão adicionar" />
+            <img src="<%=require('./images/Vectorplus.svg')%>" alt="Botão adicionar">
           </button>
         </section>
 
@@ -53,15 +53,15 @@
             src="./images/yosemite_valley.svg"
             alt="um rio envolto de árvores e montanhas ao fundo"
             class="element__image"
-          />
+          >
           <button class="element__delete">
-            <img src="<%=require('./images/Trashclose.svg')%>" />
+            <img src="<%=require('./images/Trashclose.svg')%>">
           </button>
           <div class="element__description">
             <p class="element__title">Vale de Yosemite</p>
             <div class="element__button-container">
               <button class="element__like">
-                <img src="<%=require('./images/VectorheartEmpty.svg')%>" alt="Botão curtir" />
+                <img src="<%=require('./images/VectorheartEmpty.svg')%>" alt="Botão curtir">
               </button>
               <p class="element__counter"></p>
             </div>
@@ -79,7 +79,7 @@
     <div class="popup">
       <h2 class="popup__title">Editar perfil</h2>
       <button class="popup__close-button">
-        <img src="<%=require('./images/CloseIconclose.svg')%>" alt="Botão fechar" />
+        <img src="<%=require('./images/CloseIconclose.svg')%>" alt="Botão fechar">
       </button>
       <form class="popup__form popup__form_edit-profile" name="profile__form" novalidate>
         <fieldset class="popup__set">
@@ -92,7 +92,7 @@
             id="name-input"
             minlength="2"
             maxlength="40"
-          />
+          >
           <span class="popup__placeholder name-input-error"></span>
 
           <input
@@ -104,7 +104,7 @@
             required
             minlength="2"
             maxlength="200"
-          />
+          >
 
           <span class="popup__placeholder about-input-error"></span>
           <button type="submit" class="popup__submit popup__save-button">
@@ -117,7 +117,7 @@
     <div class="location popup">
       <h2 class="location__title popup__title">Novo local</h2>
       <button class="location__close-button popup__close-button">
-        <img src="<%=require('./images/CloseIconclose.svg')%>" alt="Botão fechar" />
+        <img src="<%=require('./images/CloseIconclose.svg')%>" alt="Botão fechar">
       </button>
       <form class="popup__form popup__form_local" name="form_local" novalidate>
         <fieldset class="popup__set">
@@ -130,7 +130,7 @@
             required
             minlength="2"
             maxlength="30"
-          />
+          >
           <span class="popup__placeholder title-input-error"></span>
           <input
             type="url"
@@ -139,7 +139,7 @@
             class="popup__input location__input-url"
             id="url-input"
             required
-          />
+          >
           <span class="location__placeholder url-input-error"></span>
           <button type="submit" class="popup__submit location__create-button">
             Criar
@@ -150,19 +150,19 @@
 
     <div class="image">
       <button class="image__close-button">
-        <img src="<%=require('./images/CloseIconclose.svg')%>" alt="Botão fechar" />
+        <img src="<%=require('./images/CloseIconclose.svg')%>" alt="Botão fechar">
       </button>
       <img
         src="<%=require('./images/mountain.svg')%>"
         alt="Imagem tamanho real após o clique"
         class="image__item"
-      />
+      >
       <p class="image__description">Vale de Yosemite</p>
     </div>
 
     <div class="popup confirmation">
       <button class="confirmation__close-button">
-        <img src="<%=require('./images/CloseIconclose.svg')%>" alt="Botão fechar" />
+        <img src="<%=require('./images/CloseIconclose.svg')%>" alt="Botão fechar">
       </button>
       <p class="confirmation__description">Tem certeza?</p>
       <form class="confirmation__form" novalidate>
@@ -174,7 +174,7 @@
 
     <div class="popup edit-profile">
       <button class="edit-profile__close-button">
-        <img src="<%=require('./images/CloseIconclose.svg')%>" alt="Botão fechar" />
+        <img src="<%=require('./images/CloseIconclose.svg')%>" alt="Botão fechar">
       </button>
       <p class="edit-profile__description">Alterar a foto de perfil</p>
         <form class="popup__form edit-profile__form" name="form_edit-profile" novalidate>
@@ -185,7 +185,7 @@
               class="popup__input edit-profile__input-url"
               id="edit-profile-input"
               required
-            />
+            >
             <span class="edit-profile_placeholder edit-profile-input-error"></span>
           <button type="submit" class="popup__submit edit-profile__button">
             Salvar
