@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "core-js": "^3.31.1",
-    "html-webpack-plugin": "^5.5.3"
+    "html-webpack-plugin": "^5.5.3",
+    "source-map": "^0.7.4"
   }
 }
