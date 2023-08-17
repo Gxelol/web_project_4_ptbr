@@ -1,5 +1,5 @@
 import * as data from '../utils/constants.js';
-import { api } from '../index.js';
+import { api } from '../pages/index.js';
 export default class UserInfo {
   constructor({ nameSelector, aboutSelector }) {
     this._name = document.querySelector(nameSelector);

@@ -1,5 +1,5 @@
 import * as data from "../utils/constants.js";
-import { editProfileValidation, ImageValidation, profileImageValidation } from '../index.js';
+import { editProfileValidation, ImageValidation, profileImageValidation } from '../pages/index.js';
 
 export default class Api {
   constructor(url, authorization) {
