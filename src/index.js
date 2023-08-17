@@ -3,7 +3,6 @@ import * as data from "./utils/constants.js";
 
 import Card from "./components/Card.js";
 import FormValidator from "./components/FormValidator.js";
-import Popup from "./components/Popup.js";
 import PopupWithImage from "./components/PopupWithImage.js";
 import PopupWithForm from "./components/PopupWithForm.js";
 import PopupConfirmation from './components/PopupConfirmation';
@@ -20,8 +19,7 @@ export const api = new Api(
 
 //==============================================================================
 
-//==============================================================================
-const userInformation = api.getUserInfo().then((item) => {
+api.getUserInfo().then((item) => {
   data.profileName.textContent = item.name;
   data.profileAbout.textContent = item.about;
   data.profileImage.src = item.avatar;
@@ -75,7 +73,6 @@ const renderInitialCards = () => {
             }
             else {
               const cardElement = createCard(item);
-              const likeButton = cardElement.querySelector(".element__like");
 
               if (item.likes.some((like) => like._id === profile._id)) {
                 cardElement.querySelector(".element__like").classList.add("element__like_active");

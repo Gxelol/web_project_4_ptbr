@@ -1,6 +1,3 @@
-import * as data from '../utils/constants.js';
-import renderCards from '../utils/utils.js';
-
 import { api } from '../index.js';
 
 export default class Card {
