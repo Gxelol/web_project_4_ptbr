@@ -1,4 +1,5 @@
-import { api } from '../pages/index.js';
+import { api, confirmation } from '../pages/index.js';
+import PopupConfirmation from './PopupConfirmation.js';
 
 export default class Card {
   constructor({item, cardSelector, handleCardClick}) {
@@ -38,9 +39,9 @@ export default class Card {
     this._element
       .querySelector(".element__delete")
       .addEventListener("click", () => {
-        api.deleteCard(this._id).then(res => console.log(res))
-        this._handleDeleteElement();
-      });
+        confirmation.open();
+        confirmation.setEventListeners(this);
+      })
   }
 
   _setLike() {
@@ -78,9 +79,5 @@ export default class Card {
     this._setDelete();
     this._setLike();
     this._openImage();
-  }
-
-  _handleDeleteElement() {
-    this._element.remove();
   }
 }

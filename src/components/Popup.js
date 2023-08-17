@@ -36,6 +36,10 @@ export default class Popup {
       this.close();
     });
 
+    data.closeEditProfileButton.addEventListener("click", () => {
+      this.close();
+    });
+
     data.closeImageButton.addEventListener("click", () => {
       this.close();
     });

@@ -1,23 +1,20 @@
 import Popup from './Popup';
-import * as data from '../utils/constants.js';
 import { api } from '../pages/index.js';
 
 export default class PopupConfirmation extends Popup {
-  constructor({popupSelector, handleSubmit}) {
+  constructor({popupSelector}) {
     super(popupSelector);
-    this._handleSubmit = handleSubmit;
     this._formElement = this._element.querySelector('form');
   }
 
-  setEventListeners() {
+  setEventListeners(card) {
     super.setEventListeners();
 
     this._formElement.addEventListener("submit", (evt) => {
       evt.preventDefault();
 
-      api.editProfilePicture(data.inputUrlProfilePic.value).then((profilePic) => {
-        this._handleSubmit(profilePic.avatar);
-      })
+      api.deleteCard(card._id).then(res => console.log(res))
+      card._element.remove();
 
       this.close();
     });

@@ -6,6 +6,7 @@ import FormValidator from "../components/FormValidator.js";
 import PopupWithImage from "../components/PopupWithImage.js";
 import PopupWithForm from "../components/PopupWithForm.js";
 import PopupConfirmation from '../components/PopupConfirmation';
+import PopupChangeProfile from '../components/PopupChangeProfile.js';
 import Section from "../components/Section.js";
 import UserInfo from "../components/UserInfo.js";
 import Api from "../components/Api.js";
@@ -95,6 +96,15 @@ renderInitialCards();
 
 //==============================================================================
 
+export const confirmation = new PopupConfirmation({
+  popupSelector: ".confirmation",
+  handleSubmit: (item) => {
+
+  }
+});
+
+//==============================================================================
+
 const popup = new PopupWithForm({
   popupSelector: ".popup",
   handleSubmit: () => {
@@ -113,9 +123,10 @@ data.editButton.addEventListener("click", () => {
 
 popup.setEventListeners();
 
+
 //==============================================================================
 
-const popupConfirmation = new PopupConfirmation({
+const popupChangeProfile = new PopupChangeProfile({
   popupSelector: ".edit-profile",
   handleSubmit: (link) => {
     document.querySelector(".profile__image").src = link;
@@ -124,10 +135,10 @@ const popupConfirmation = new PopupConfirmation({
 
 data.editProfileButton.addEventListener("click", () => {
   data.saveProfilePicture.textContent = 'Salvar';
-  popupConfirmation.open();
+  popupChangeProfile.open();
 });
 
-popupConfirmation.setEventListeners();
+popupChangeProfile.setEventListeners();
 
 //==============================================================================
 

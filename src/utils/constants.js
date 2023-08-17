@@ -1,7 +1,8 @@
 export const cardSelector = ".elements__table"
 export const popup = document.querySelector(".popup");
 export const closePopupButton = document.querySelector(".popup__close-button");
-export const closeConfirmationButton = document.querySelector(".edit-profile__close-button");
+export const closeEditProfileButton = document.querySelector(".edit-profile__close-button");
+export const closeConfirmationButton = document.querySelector(".confirmation__close-button");
 export const saveButton = document.querySelector(".popup__save-button");
 export const inputName = document.querySelector(".popup__input-name");
 export const inputAbout = document.querySelector(".popup__input-about");
